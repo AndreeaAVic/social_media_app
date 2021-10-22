@@ -1,9 +1,10 @@
 import './App.css';
+import Navbar from './components/layout/Navbar';
 
 const App = () => {
   return (
     <div className="App">
-      <h4>Test React arrow component...</h4>
+      <Navbar />
     </div>
   );
 }

@@ -1,0 +1,59 @@
+/* css global variables */
+
+:root {
+    --primary-color: #F0A500;
+    --dark-color: #082032;
+    --light-color: #FFF8E5;
+    --error-color: #E05D5D;
+    --success-color: #00A19D;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    color: #3B0000;
+}
+
+.navbar ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.bg-primary,
+.btn-primary,
+.alert-primary {
+    background-color: var(--primary-color);    
+}
+
+.bg-dark,
+.btn-dark,
+.alert-dark {
+    background-color: var(--dark-color);
+}
+
+.bg-light,
+.btn-light,
+.alert-light {
+    background-color: var(--light-color);
+}
+
+.bg-error,
+.btn-error,
+.alert-error {
+    background-color: var(--error-color);
+}
+
+.bg-success,
+.btn-success,
+.alert-success {
+    background-color: var(--success-color);
+}
