@@ -4,7 +4,7 @@ import appCover from './appCover.jpg';
 
 const BackgroundPattern = props => {
     return (
-        <div className="main-cover">
+        <div className="background-pattern">
            <img src={appCover} alt="book" /> 
         </div>
     )

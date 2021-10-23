@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 import { AiFillHome } from 'react-icons/ai';
 import { FaUser } from 'react-icons/fa';
 import { RiLoginCircleFill } from 'react-icons/ri';
@@ -11,17 +12,21 @@ const Navbar = props => {
             <nav className="navbar bg-primary">
                 <h1 className="logo">SociaL in</h1>
                 <ul>
-                    <li> 
+                    {/* <li> 
                         <AiFillHome /> Home
                     </li>
                     <li> 
                         <FaUser /> Account
+                    </li> */}
+                    <li> 
+                        <Link to="/login"> 
+                            <RiLoginCircleFill /> Log in 
+                        </Link>
                     </li>
                     <li> 
-                        <RiLoginCircleFill /> Log in
-                    </li>
-                    <li> 
-                        <ImEnter /> Register
+                        <Link to="/register"> 
+                            <ImEnter /> Register 
+                        </Link>
                     </li>
                 </ul>
             </nav>

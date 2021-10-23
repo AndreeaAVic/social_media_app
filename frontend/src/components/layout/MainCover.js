@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import BackgroundPattern from './BackgroundPattern';
 import ButtonPattern from './ButtonPattern';
@@ -7,12 +8,16 @@ import "./MainCover.css";
 
 const MainCover = props => {
     return (
-        <div>
+        <div className="main-cover">
             <Navbar />
             <BackgroundPattern />
-            <ButtonPattern name="Log in" />
+            <Link to="/login">
+                <ButtonPattern name="Log in" />
+            </Link>
             <br />
-            <ButtonPattern name="Register" />
+            <Link to="/register">
+                <ButtonPattern name="Register" />
+            </Link>
         </div>
     )
 };
