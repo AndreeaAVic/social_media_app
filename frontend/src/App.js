@@ -1,12 +1,12 @@
 import './App.css';
-import Navbar from './components/layout/Navbar';
+import MainCover from './components/layout/MainCover';
 
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
+      <MainCover />
     </div>
   );
-}
+};
 
 export default App;

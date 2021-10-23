@@ -9,7 +9,7 @@ const Navbar = props => {
     return (
         <div>
             <nav className="navbar bg-primary">
-                <h1 className="logo">react2social</h1>
+                <h1 className="logo">SociaL in</h1>
                 <ul>
                     <li> 
                         <AiFillHome /> Home
@@ -27,7 +27,7 @@ const Navbar = props => {
             </nav>
         </div>
     )
-}
+};
 
 Navbar.propTypes = {};
 
