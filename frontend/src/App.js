@@ -1,4 +1,4 @@
-import MainCover from './components/layout/MainCover';
+import LandingPage from './components/layout/LandingPage';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginPage from './components/layout/LoginPage';
 import RegisterPage from './components/layout/RegisterPage';
@@ -16,7 +16,7 @@ const App = () => {
             <RegisterPage />
           </Route>
           <Route path="/">
-            <MainCover />  
+            <LandingPage />  
           </Route>
         </Switch>
       </div>

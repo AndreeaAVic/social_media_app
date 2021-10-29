@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Navbar from './Navbar';
+import LoginForm from './LoginForm';
 
 const LoginPage = props => {
     return (
         <div>
-           <h1>Login</h1> 
+           <Navbar /> 
+           <LoginForm />
         </div>
     )
 };

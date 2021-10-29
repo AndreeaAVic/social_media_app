@@ -7,6 +7,10 @@ import { RiLoginCircleFill } from 'react-icons/ri';
 import { ImEnter } from 'react-icons/im';
 
 const Navbar = props => {
+    let posts = fetch('/api/posts')
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    
     return (
         <div>
             <nav className="navbar bg-primary">

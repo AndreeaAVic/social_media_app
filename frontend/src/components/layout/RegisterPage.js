@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Navbar from './Navbar';
+import RegisterForm from './RegisterForm';
 
 const RegisterPage = props => {
     return (
         <div>
-            <h1>Register</h1>
+            <Navbar />
+            <RegisterForm />
         </div>
     )
 };
