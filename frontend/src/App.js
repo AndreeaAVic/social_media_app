@@ -1,26 +1,38 @@
 import LandingPage from './components/layout/LandingPage';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import LoginPage from './components/layout/LoginPage';
-import RegisterPage from './components/layout/RegisterPage';
+import Navbar from './components/layout/Navbar';
+import LoginPage from './components/auth/LoginPage';
+import RegisterPage from './components/auth/RegisterPage';
+import Posts from './components/posts/Posts';
 import './App.css';
+
+// redux
+import { Provider } from 'react-redux';
+import store from './store';
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/login">
-            <LoginPage />
-          </Route>
-          <Route path="/register">
-            <RegisterPage />
-          </Route>
-          <Route path="/">
-            <LandingPage />  
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <LandingPage />  
+            </Route>
+            <Route exact path="/login">
+              <LoginPage />
+            </Route>
+            <Route exact path="/register">
+              <RegisterPage />
+            </Route>
+            <Route exact path="/posts">
+              <Posts />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </Provider>
   );
 };
 

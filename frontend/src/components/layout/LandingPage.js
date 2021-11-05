@@ -1,12 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
 
-const LandingPage = props => {
+const LandingPage = () => {
     return (
         <div className="landing-page">
-            <Navbar />
             <Link to="/login">
                 <button type="button" className="btn landing-btn">Log in</button>
             </Link>
@@ -16,7 +13,5 @@ const LandingPage = props => {
         </div>
     )
 };
-
-LandingPage.propTypes = {};
 
 export default LandingPage;
