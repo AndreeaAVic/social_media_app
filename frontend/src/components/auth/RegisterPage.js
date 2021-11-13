@@ -1,9 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { FaUserAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setAlert } from '../../actions/alert';
+import { register } from '../../actions/auth';
+import PropTypes from 'prop-types';
+import Alert from '../layout/Alert';
 
-const RegisterPage = () => {
+const RegisterPage = (props) => {
     const [ formData, setFormData ] = useState({
         name: '',
         email: '',
@@ -16,34 +21,28 @@ const RegisterPage = () => {
         e.preventDefault();
         if(password !== confirmationPassword) {
             console.log('Passwords do not match');
+            props.setAlert('Passwords do not match', 'error', 3000);
         } else {
             const user = {
                 name,
                 email,
                 password,
             };
-            try {
-                const config = {
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                };
-                const body = JSON.stringify(user);
-
-                const response = await axios.post('/api/users', body, config);
-                console.log(response.data);
-            } catch (error) {
-                console.log(error.response.data);
-            }
+            props.register(user);
         }
     };
 
-    return (
+    console.log('isAuthenticated: ', props.isAuthenticated);
+
+    return props.isAuthenticated ? (
+        <Redirect to='/posts' />
+    ) : (
         <div className="container">
             <div className="form text-color lead">
                 <h2 className="text-primary large">Register</h2>
                 <FaUserAlt />
                 <h4>Create your account</h4>
+                <Alert />
             </div>
             <form className="form" onSubmit={(e) => submitHandler(e)}>
                 <div className="form-group">
@@ -111,4 +110,14 @@ const RegisterPage = () => {
     )
 };
 
-export default RegisterPage;
+RegisterPage.propTypes = {
+    setAlert: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool,
+}
+
+const mapStateToProps = (state) => ({
+    isAuthenticated: state.auth.isAuthenticated,
+});
+
+export default connect(mapStateToProps, { setAlert, register })(RegisterPage);
