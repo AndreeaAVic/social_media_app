@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import { FaUserAlt } from 'react-icons/fa';
 import { Link, Redirect } from 'react-router-dom';

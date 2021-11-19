@@ -16,3 +16,18 @@ export const LOGIN_FAIL = 'LOGIN_FAIL';
 
 // logout
 export const LOGOUT = 'LOGOUT';
+
+// posts
+export const ADD_POST = 'ADD_POST';
+export const ERROR_POST = 'ERROR_POST';
+export const GET_POSTS = 'GET_POSTS';
+export const UPDATE_POST = 'UPDATE_POST';
+export const DELETE_POST = 'DELETE_POST';
+
+// profiles
+export const GET_PROFILES = 'GET_PROFILES';
+export const ERROR_PROFILES = 'ERROR_PROFILES';
+
+// likes
+export const ADD_LIKE = 'ADD_LIKE';
+export const UNLIKE = 'UNLIKE';

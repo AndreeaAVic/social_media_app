@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { AiFillEdit } from 'react-icons/ai';
 // import { FaUser } from 'react-icons/fa';
-import { RiLogoutCircleFill, RiAccountCircleFill } from 'react-icons/ri';
+import { RiLogoutCircleFill, RiAccountCircleFill, RiUserSearchFill } from 'react-icons/ri';
 import { logout } from '../../actions/auth';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -22,8 +22,13 @@ const AuthLinks = (props) => {
                     </Link>
                 </li>
                 <li> 
-                    <Link to="/profile"> 
+                    <Link to="/profile/user"> 
                         <RiAccountCircleFill /> My account 
+                    </Link>
+                </li>
+                <li> 
+                    <Link to="/profile"> 
+                        <RiUserSearchFill /> Discover people 
                     </Link>
                 </li>
             </ul> 
@@ -36,4 +41,8 @@ AuthLinks.propTypes = {
     auth: PropTypes.object.isRequired,
 }
 
-export default connect(null, { logout })(AuthLinks);
+const mapStateToProps = (state) => ({
+    auth: state.auth,
+});
+
+export default connect(mapStateToProps, { logout })(AuthLinks);

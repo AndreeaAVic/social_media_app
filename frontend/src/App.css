@@ -137,13 +137,17 @@ h5 {
     color: #3B0000;
 }
 
-.container {
+.container,
+.post-container {
     max-width: 1100px;
 	margin: auto;
 	overflow: hidden;
 	padding: 0 2rem;
-	margin-top: 6rem;
-	margin-bottom: 3rem;
+	margin-top: 3rem;
+}
+
+.container {
+    margin-bottom: 3rem;
 }
 
 /* Form */
@@ -192,8 +196,93 @@ h5 {
     background-color: var(--light-color);
     padding: 2rem;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.post button {
+    margin-right: 0.5em;
+    border: none;
+    border-radius: 5px;
+    width: 4em;
+    height: 1.75em;
 }
 
 .icons {
     margin: 0.75em 0.75em 0 0;
+}
+
+.form-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-post input,
+textarea {
+    background-color: var(--light-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 0.3rem;
+    font-size: 1em;
+}
+
+.form-post input[type='submit'] {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    width: 6em; 
+}
+
+.post-date {
+    color: burlywood;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+.round-img {
+    border: 1px solid #3B0000;
+    border-radius: 100%;
+    width: 5em;
+}
+
+.post h4 {
+    color: var(--primary-color);
+    display: block;
+}
+
+.profiles-container {
+    max-width: 1100px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2rem;
+	margin-top: 4rem;
+}
+
+.user-container {
+    border-radius: 10px;
+    background-color: var(--light-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.avatar-container {
+    margin-right: 1rem;
+}
+
+.users {
+    margin-top: 1rem;
+}
+
+.new-friends {
+    margin-right: 0.5rem;
+    display: inline;
+    font-weight: bold;
+}
+
+.post-container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.5em;
 }

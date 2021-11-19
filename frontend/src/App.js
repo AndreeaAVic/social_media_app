@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import LoginPage from './components/auth/LoginPage';
 import RegisterPage from './components/auth/RegisterPage';
 import Posts from './components/posts/Posts';
+import Users from './components/users/Users';
 import './App.css';
 
 // redux
@@ -28,6 +29,9 @@ const App = () => {
             </Route>
             <Route exact path="/posts">
               <Posts />
+            </Route>
+            <Route exact path="/profile">
+              <Users />
             </Route>
           </Switch>
         </div>

@@ -27,6 +27,10 @@ export const register =
                 type: REGISTER_SUCCESS,
                 payload: response.data,
             });
+            dispatch({
+                type: USER_LOADED,
+                payload: response.data,
+            });
         } catch (err) {
             const errors = err.response.data.errors;
             if(errors) {
@@ -70,11 +74,15 @@ export const login =
         const body = JSON.stringify({ email, password });
 
         try {
-           const response = await axios.post('/api/auth', body, config);
-           dispatch({
-               type: LOGIN_SUCCESS,
-               payload: response.data,
-           }); 
+            const response = await axios.post('/api/auth', body, config);
+            dispatch({
+                type: LOGIN_SUCCESS,
+                payload: response.data,
+            });
+            dispatch({
+                type: USER_LOADED,
+                payload: response.data,
+            }); 
         } catch (error) {
             const errors = error.response.data.errors;
             if(errors) {
