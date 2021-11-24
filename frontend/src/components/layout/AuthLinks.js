@@ -22,7 +22,7 @@ const AuthLinks = (props) => {
                     </Link>
                 </li>
                 <li> 
-                    <Link to="/profile/user"> 
+                    <Link to="/account"> 
                         <RiAccountCircleFill /> My account 
                     </Link>
                 </li>

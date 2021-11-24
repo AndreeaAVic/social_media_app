@@ -24,10 +24,15 @@ export const GET_POSTS = 'GET_POSTS';
 export const UPDATE_POST = 'UPDATE_POST';
 export const DELETE_POST = 'DELETE_POST';
 
-// profiles
-export const GET_PROFILES = 'GET_PROFILES';
-export const ERROR_PROFILES = 'ERROR_PROFILES';
-
 // likes
 export const ADD_LIKE = 'ADD_LIKE';
 export const UNLIKE = 'UNLIKE';
+
+// profiles
+export const GET_ALL_PROFILES = 'GET_ALL_PROFILES';
+export const ERROR_PROFILES = 'ERROR_PROFILES';
+export const GET_PROFILE = 'GET_PROFILE';
+export const CLEAR_PROFILE = 'CLEAR_PROFILE';
+
+// account
+export const ACCOUNT_DELETED = 'ACCOUNT_DELETED';

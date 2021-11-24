@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 import VisitorsLinks from './VisitorsLinks';
 import AuthLinks from './AuthLinks';
 import { connect } from 'react-redux';
+import books from '../../images/books.png';
 
 const Navbar = (props) => {
     return (
         <div>
             <nav className="navbar bg-primary">
                 <h1 className="logo">
-                    <Link to='/'>SociaL in </Link>
+                    <img className="bookImg" src={books} alt="books" />
+                    <Link to='/'>shareBook</Link>
                 </h1>
                 { props.auth.isAuthenticated ? <AuthLinks /> : <VisitorsLinks /> } 
             </nav>

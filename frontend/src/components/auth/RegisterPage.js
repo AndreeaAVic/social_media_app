@@ -101,7 +101,7 @@ const RegisterPage = (props) => {
             </form>
             <div className="form text-color">
                 <h5>Don't have an account?</h5>
-                <Link to="/login">
+                <Link to="/login" className="links">
                     Log in
                 </Link>
             </div>

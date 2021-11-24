@@ -7,6 +7,7 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT,
+    CLEAR_PROFILE,
 } from "./constant";
 import axios from "axios";
 import setTokenHeaderInfo from "../utils/setTokenHeaderInfo";
@@ -79,10 +80,10 @@ export const login =
                 type: LOGIN_SUCCESS,
                 payload: response.data,
             });
-            dispatch({
-                type: USER_LOADED,
-                payload: response.data,
-            }); 
+            // dispatch({
+            //     type: USER_LOADED,
+            //     payload: response.data,
+            // }); 
         } catch (error) {
             const errors = error.response.data.errors;
             if(errors) {
@@ -97,6 +98,9 @@ export const login =
 }
 
 export const logout = () => (dispatch) => {
+    dispatch({ 
+        type: CLEAR_PROFILE 
+    });
     dispatch({
         type: LOGOUT
     });

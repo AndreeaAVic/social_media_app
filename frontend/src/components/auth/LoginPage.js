@@ -58,7 +58,7 @@ const LoginPage = (props) => {
             </form>
             <div className="form text-color">
                 <h5>Don't have an account?</h5>
-                <Link to="/register">
+                <Link to="/register" className="links">
                     Register
                 </Link>
             </div>
