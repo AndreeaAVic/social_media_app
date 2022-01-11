@@ -24,8 +24,8 @@ const LoginPage = (props) => {
         <Redirect to='/posts' />
         ) : (
         <div className="container">
-            <div className="form text-color lead">
-                <h2 className="text-primary large">Log in</h2>
+            <div className="form lead">
+                <h2 className="large">Log in</h2>
                 <FaUserAlt />
                 <h4>Log into your account</h4>
             </div>
@@ -56,7 +56,7 @@ const LoginPage = (props) => {
                 </div>
                 <input type="submit" className="btn form-text" value="Log in" />
             </form>
-            <div className="form text-color">
+            <div className="form">
                 <h5>Don't have an account?</h5>
                 <Link to="/register" className="links">
                     Register

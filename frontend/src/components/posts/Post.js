@@ -53,7 +53,6 @@ const Post = ({
                                     required 
                                 />
                                 <input 
-                                    className='text-color'
                                     type='submit'
                                     value='Update post' 
                                 />

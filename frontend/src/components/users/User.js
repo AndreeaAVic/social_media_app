@@ -13,7 +13,7 @@ const User = ({
 					<img src={user.avatar} alt="" className="round-img" />
 				</div>
 				<div>
-					<h2 className='text-primary'>{user.name}</h2>
+					<h2>{user.name}</h2>
 					<p className='text-color'>
 						<AiOutlinePhone /> {phoneNumber}
 					</p>

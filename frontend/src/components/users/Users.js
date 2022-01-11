@@ -13,7 +13,7 @@ const Users = ({ getAllProfiles, profile: { profiles, loading } }) => {
 	return (
 		<Fragment>
             <div className="profiles-container">
-                <p className='new-friends text-color'>Find new friends</p>
+                <p className='new-friends'>Find new friends</p>
                 <FaUserFriends /> 
                 <div className='users'>
                     {profiles.length > 0 ? (

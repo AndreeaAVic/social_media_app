@@ -26,7 +26,7 @@ const Home = ({
 
 	return (
 		<div className="container">
-			<p className="text-primary welcome">
+			<p className="welcome">
 				<SiHey /> Welcome, {user && user.name}!
 			</p>
 			<Fragment>

@@ -37,8 +37,8 @@ const RegisterPage = (props) => {
         <Redirect to='/posts' />
     ) : (
         <div className="container">
-            <div className="form text-color lead">
-                <h2 className="text-primary large">Register</h2>
+            <div className="form lead">
+                <h2 className="large">Register</h2>
                 <FaUserAlt />
                 <h4>Create your account</h4>
                 <Alert />
@@ -99,7 +99,7 @@ const RegisterPage = (props) => {
                 </div>
                 <input type="submit" className="btn form-text" value="Register" />
             </form>
-            <div className="form text-color">
+            <div className="form">
                 <h5>Don't have an account?</h5>
                 <Link to="/login" className="links">
                     Log in
